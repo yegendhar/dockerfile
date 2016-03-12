@@ -1,5 +1,7 @@
 # Postgres
 
+[![Docker Repository on Quay](https://quay.io/repository/codemy/postgres/status "Docker Repository on Quay")](https://quay.io/repository/codemy/postgres)
+
 This is Codemy's Postgres with PgTune configs
 
 see the config files for different settings used
@@ -16,3 +18,5 @@ docker run --name <name>-postgres \
            codemy/postgres:latest \
            postgres -c config_file=/configs/1gb-ram.conf
 ```
+
+

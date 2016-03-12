@@ -1,5 +1,7 @@
 # Codemy redis
 
+[![Docker Repository on Quay](https://quay.io/repository/codemy/redis/status "Docker Repository on Quay")](https://quay.io/repository/codemy/redis)
+
 This redis instance is configured to use 500mb of ram with 200 connections.
 
 # Usage
