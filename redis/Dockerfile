@@ -1,4 +1,4 @@
 FROM redis:3.0.7-alpine
 
-COPY redis.conf /usr/local/etc/redis/redis.conf
-CMD ["redis-server", "/usr/local/etc/redis/redis.conf"]
+COPY configs/* /configs/
+CMD ["redis-server", "/configs/3gb-ram.conf"]
