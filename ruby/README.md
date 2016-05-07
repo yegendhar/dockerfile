@@ -15,18 +15,13 @@ Very simple simply do this in your rails app
 Create a `Dockerfile` with the following content
 
 ```
-FROM codemy/ruby-node
-MAINTAINER Your Name <yourname@company.com>
+FROM codemy/ruby:latest
+MAINTAINER Zack Siri <zack@codemy.net>
 
-# copy the source to the working dir
-COPY . /usr/app
+COPY . /usr/src/app
 
-# bundle for production
-RUN bundle install --path vendor/bundle --without development test --deployment && \
-    apk del  build_deps
-
-# clean up the apk cache
-RUN rm -rf /var/cache/apk/*
+RUN bundle install --path vendor/bundle --without development test doc --deployment --jobs=4
+RUN DB_ADAPTER=nulldb bundle exec rake assets:precompile
 ```
 
 ### Build the docker image
