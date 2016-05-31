@@ -1,4 +1,4 @@
-FROM ruby:2.3.0
+FROM ruby:latest
 MAINTAINER Zack Siri <zack@codemy.net>
 
 RUN apt-get update && apt-get install musl-dev -y
