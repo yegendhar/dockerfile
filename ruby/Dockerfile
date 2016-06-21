@@ -11,7 +11,5 @@ RUN apk --update add --virtual build-dependencies \
                                git \ 
                                && rm -rf /var/cache/apk/*
 
-RUN bundle config build.nokogiri --use-system-libraries
-
 RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
