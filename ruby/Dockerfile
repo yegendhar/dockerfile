@@ -14,6 +14,11 @@ RUN apt-get update && apt-get install -y git-core sudo curl zlib1g-dev build-ess
 
 # install ruby from package
 RUN add-apt-repository ppa:brightbox/ruby-ng && apt-get update && apt-get install -y ruby2.3 ruby2.3-dev
+RUN gem update --system
+RUN gem install bundler
+
+# install nodejs
+RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - && apt-get update && apt-get install -y nodejs
 
 RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
