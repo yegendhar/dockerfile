@@ -1,2 +1,2 @@
-network.host: 0.0.0.0
+network.host: 34.201.252.55
 script.engine.groovy.inline.aggs: on
